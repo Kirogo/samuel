@@ -1,0 +1,76 @@
+/* CSS Document */
+body{padding:0px; margin:0px; background:#ebe8e6; color:#969686; font:10px/14px Tahoma, Geneva, sans-serif;}
+div, p, ul, h2, h3, h4, img{padding:0px; margin:0px;}
+ul{list-style-type:none;}
+
+.clear {clear: both; margin: 0px; height:0}
+
+p a{font:10px/14px Tahoma, sans-serif; color:#964b23; text-decoration:underline;}
+p a:hover{ color:#000; text-decoration:none;}
+
+.headline{font:10px/14px Tahoma, Geneva, sans-serif; color:#964b23; font-weight:bold}
+
+.container{width:775px; position:relative; margin:0 auto; color: #333333}
+
+/* HEADER */
+
+#header{width:775px; height:342px; position:relative; background:url(../images/b_header.jpg) 0 0 no-repeat}
+#header img#logo{position:absolute; top:158px; left:402px}
+
+#header ul.menu{position:absolute; top:26px; left:58px; width:695px}
+#header ul.menu li{height:18px; margin-right:15px; float:left}
+#header ul.menu li a{height:18px; display:block; text-indent:-20000px; }
+#header ul.menu li a:hover{height:18px;}
+
+#header ul.menu li.btn_1 a{width:108px; background:url(../images/btn_1.gif) 0 0 no-repeat; }
+#header ul.menu li.btn_1 a:hover{width:108px; background:url(../images/btn_1_over.gif) 0 0 no-repeat;}
+
+#header ul.menu li.btn_2 a{width:93px; background:url(../images/btn_2.gif) 0 0 no-repeat; }
+#header ul.menu li.btn_2 a:hover{width:93px; background:url(../images/btn_2_over.gif) 0 0 no-repeat;}
+
+#header ul.menu li.btn_3 a{width:107px; background:url(../images/btn_3.gif) 0 0 no-repeat; }
+#header ul.menu li.btn_3 a:hover{width:107px; background:url(../images/btn_3_over.gif) 0 0 no-repeat;}
+
+#header ul.menu li.btn_4 a{width:89px; background:url(../images/btn_4.gif) 0 0 no-repeat; }
+#header ul.menu li.btn_4 a:hover{width:89px; background:url(../images/btn_4_over.gif) 0 0 no-repeat;}
+
+#header ul.menu li.btn_5{margin-right:0}
+#header ul.menu li.btn_5 a{width:98px; background:url(../images/btn_5.gif) 0 0 no-repeat; }
+#header ul.menu li.btn_5 a:hover{width:98px; background:url(../images/btn_5_over.gif) 0 0 no-repeat;}
+
+#header ul.menu li.line{width:10px; background:url(../images/spacer_m.gif) 0 4px no-repeat}
+
+/* CONTENT */
+
+#content{width:775px; position:relative; clear:both; margin: 0 auto; background:url(../images/b_content.gif) 0 0 repeat-x}
+
+#c01{width:280px; float:left; margin:33px 23px 0 35px; display:inline}
+#c02{width:200px; float:left; margin:37px 17px 0 0;}
+#c03{width:185px; float:left; margin:37px 0 0 0;}
+
+#welcome h2{height:26px; position:relative; background:url(../images/h_welcome.gif) 0 0 no-repeat; margin-bottom:8px}
+#welcome img{float:left; margin-right:5px; margin-left:1px; display:inline}
+#welcome p{margin-left:9px; padding-top:5px}
+#welcome p#welText{float:left; width:148px; margin-left:0; padding-top:10px}
+
+#why h2{height:22px; position:relative; background:url(../images/h_why.gif) 0 0 no-repeat; margin-bottom:20px}
+#why p{margin:0 0 20px 5px}
+
+#why ul {margin-left:11px; clear:both;}
+#why ul li{font:10px/14px Tahoma, Geneva, sans-serif; background:url(../images/check.gif) 0 2px no-repeat; padding-left:29px; height:20px;}
+#why ul li a{color:#964b23; text-decoration:underline;}
+#why ul li a:hover{color:#000; text-decoration:none;}
+
+#lessons h2{height:21px; position:relative; background:url(../images/h_lessons.gif) 0 0 no-repeat; margin-bottom:20px}
+#lessons img{margin: 0 0 5px 1px }
+#lessons p{margin:0 0 0 5px}
+
+.clear#end{height:15px}
+
+/* FOOTER */
+
+#footer{width:775px; height:69px; clear:both; background:url(../images/b_footer.gif) 0 0 repeat-x }
+#footer p{padding: 20px 0 0 0; font:11px/16px Tahoma, sans-serif; font-weight:normal; text-align:center; color:#3f3128;}
+#footer p a{font:11px/16px Tahoma, sans-serif; font-weight:normal; color:#3f3128; text-decoration:none; padding: 0 3px }
+#footer p a:hover{text-decoration:underline; color:#3f3128}
+

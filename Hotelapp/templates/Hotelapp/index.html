@@ -1,0 +1,41 @@
+{% extends 'Hotelapp/base.html'%}
+
+{%  block content %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="static/Hotelapp/css/style.css">
+
+
+
+<div class="container-fluid" >
+    <div class="row">
+        <h3 class="text-left text-dark" style="margin-left: 550px">ORDER</h3>
+    </div>
+     <div class="row">
+        <h4 class="text-left text-dark" style="margin-left: 350px"><span class="glyphicon glyphicon-th-list"></span>&nbsp;Please make an order from the category below</h4>
+    </div>
+
+    {% if foods %}
+            {% for food in foods %}
+                <div class=""></div>
+                <div class="col-sm-3" >
+                        <div class="thumbnail">
+                            <a href="{% url 'Hotelapp:detail' food.id %}">
+                            <img src="{{ food.cover.url}}" class="img img-thumbnail" style="height: 170px; width: 150px; ">
+                            </a>
+                            <img src="" class="img img-thumbnail">
+                            <h4><span class="glyphicon glyphicon-hand-up">&nbsp;Click the picture to order</span></h4>
+                            <div class="caption">
+                                <h4 style="color: #ba2121"><center><b>{{ food.category}}</b></center></h4>
+                                <form method="post" action="">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="food_id" value="{{ food.id}}">
+
+                                </form>
+                            </div>
+                        </div>
+                </div>
+            {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

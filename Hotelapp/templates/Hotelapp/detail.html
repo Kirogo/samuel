@@ -1,0 +1,70 @@
+{% extends 'Hotelapp/base.html'%}
+
+{%  block content%}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="thumbnail">
+                <img src="{{ food.cover.url }}" class="img img-thumbnail img img responsive">
+                <div class="caption">
+                    <h4>{{ food.category}}</h4>
+            </div>
+        </div>
+    </div>
+        <div class="col-sm-9">
+        <ul class="nav nav-pills">
+            <li role="presentation"class="active"><a href="">Item</a></li>
+            <li role="presentation"><a href="{% url 'Hotelapp:add_item' food.id %}">Add Item</a></li>
+        </ul>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="text-center">ORDER</h3>
+            </div>
+
+            <div class="panel-body">
+                {% if message %}
+                <p class="text-success">{{ message }}</p>
+                {% endif %}
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Restaurant</th>
+                        <th>Location</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+
+                    {% if food.item_set %}
+                        {% for item in food.item_set.all %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.restaurant }}</td>
+                        <td>{{ item.location }}</td>
+                        <td>
+                            <a href="{% url 'Hotelapp:cancel_order' food.id item.id %}">
+                                <button type="button" class="btn btn-danger btn-xs">
+                                    <span class="glyphicon glyphicon-trash"></span>&nbsp;Cancel
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                        {% endfor %}
+                    {% endif %}
+                </table>
+             <a href="{% url 'Hotelapp:final' food.id %}">
+                 <button type="button" class="btn btn-success btn-xs">
+                     <span class="glyphicon glyphicon-check"></span>&nbsp;ORDER
+                 </button>
+             </a>
+
+        </div>
+        </div>
+</div>
+    </div>
+
+</div>
+
+
+{% endblock %}
